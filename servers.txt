@@ -3,4 +3,4 @@
 # status is one of: Works, Flagged, Banned
 # Lines starting with # are ignored. Notes can be left blank.
 
-mc.hypixel.net | Works |
+CubeCraft.net (Bedrock Edition) | Works | Can flag players if the CPS minimum and maximum thresholds are set too close together.
