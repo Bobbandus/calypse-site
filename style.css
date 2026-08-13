@@ -11,7 +11,8 @@
   --border: #2a2740;
   --danger: #ff4d6d;
   --warn: #ffd166;
-  --radius: 8px;
+  --radius: 4px;
+  --font-heading: "Rajdhani", "Segoe UI", -apple-system, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -67,38 +68,37 @@ body {
   gap: 8px;
   color: var(--text);
   text-decoration: none;
+  font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
+  letter-spacing: 0.4px;
 }
 
-/* Buttons */
+/* Buttons: bordered, uppercase, basic-corporate */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
+  padding: 12px 28px;
   border-radius: var(--radius);
-  font-weight: 700;
+  font-family: var(--font-heading);
+  font-weight: 600;
   font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid transparent;
+  border: 1.5px solid var(--text);
+  background: transparent;
+  color: var(--text);
   transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
 }
 
-.btn-primary {
-  background: var(--panel-alt);
-  color: var(--text);
-  border-color: var(--border);
-}
-
 .btn-primary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+  background: var(--text);
+  color: var(--bg);
 }
 
 .btn-ghost {
-  background: transparent;
   color: var(--muted);
   border-color: var(--border);
 }
@@ -109,8 +109,9 @@ body {
 }
 
 .btn-small {
-  padding: 7px 14px;
-  font-size: 12.5px;
+  padding: 7px 16px;
+  font-size: 11.5px;
+  letter-spacing: 1px;
 }
 
 /* Hero */
@@ -123,6 +124,15 @@ body {
 }
 
 .hero-gem { margin-bottom: 18px; }
+
+.wordmark {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(48px, 10vw, 84px);
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+  line-height: 1;
+}
 
 .tagline {
   color: var(--muted);
@@ -209,8 +219,11 @@ body {
 .app-page-icon { margin-bottom: 14px; }
 
 .app-page h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.5px;
   margin: 0 0 8px;
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .app-page .desc {
@@ -246,8 +259,11 @@ body {
 }
 
 .sheet-page h1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.5px;
   margin: 0 0 6px;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .hint {

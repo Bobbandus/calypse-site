@@ -1,4 +1,4 @@
-// BobWare site — minimal, no dependencies.
+// Calypse site — minimal, no dependencies.
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header");
