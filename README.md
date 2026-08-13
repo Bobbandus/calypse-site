@@ -24,12 +24,10 @@ The download/repo buttons point at `github.com/Bobbandus/bobware` and its
 ## Push to GitHub
 
 ```bash
-git remote add origin https://github.com/Bobbandus/bobware-site.git
-git push -u origin master
+git push -u origin main
 ```
 
-(Or push this folder to its own repo — keeping it separate from the app
-repo, `Bobbandus/bobware`, is fine either way.)
+Remote is already set to `https://github.com/Bobbandus/waresite.git`.
 
 ## Deploy to Vercel
 
