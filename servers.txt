@@ -3,4 +3,4 @@
 # status is one of: Works, Flagged, Banned
 # Lines starting with # are ignored. Notes and detection can be left blank.
 
-CubeCraft.net (Bedrock Edition) | Works | | Can flag players if the CPS minimum and maximum thresholds are set too close together — keep at least a few CPS of spread between min and max so the walk actually drifts instead of hovering near one number.
+CubeCraft.net (Bedrock Edition) | Works | Can flag players when the CPS minimum and maximum thresholds are set too close together | The CubeCraft Bedrock anticheat may flag players when they attack at a high CPS. When triggered, it displays the subtitle “You're clicking too fast. What action will be taken is not yet tested.
