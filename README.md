@@ -18,28 +18,18 @@ Just open `index.html` in a browser, or serve it:
 npx serve .
 ```
 
-## Before you deploy
-
-The download/repo buttons in `index.html` currently point at placeholder
-`https://github.com/` links. Update these once your repo is live:
-
-- `#repo-link` (hero "View on GitHub")
-- `#download-link` (release download)
-- `#source-link` ("View source on GitHub")
-
-Point `#download-link` at your GitHub Releases page (or a direct link to
-`BobWareLauncher.exe` in a release) once you've published a build.
+The download/repo buttons point at `github.com/Bobbandus/bobware` and its
+`/releases/latest` page — no edits needed as long as that's still the repo.
 
 ## Push to GitHub
 
 ```bash
-git init
-git add .
-git commit -m "BobWare landing page"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
+git remote add origin https://github.com/Bobbandus/bobware-site.git
+git push -u origin master
 ```
+
+(Or push this folder to its own repo — keeping it separate from the app
+repo, `Bobbandus/bobware`, is fine either way.)
 
 ## Deploy to Vercel
 
