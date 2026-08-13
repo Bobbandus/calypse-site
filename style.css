@@ -8,7 +8,7 @@
   --panel-alt: #eeeef1;
   --panel-hover: #e4e4e8;
   --radius: 0px;
-  --font-heading: "Rajdhani", "Segoe UI", -apple-system, sans-serif;
+  --font-heading: "Segoe UI Semibold", "Segoe UI", -apple-system, sans-serif;
 }
 
 * { box-sizing: border-box; }

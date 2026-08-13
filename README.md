@@ -1,7 +1,8 @@
 # Calypse — website
 
-Static landing page for Calypse — white/black, square corners, Rajdhani
-headings + Segoe UI body. Pure HTML/CSS/JS, no build step.
+Static landing page for Calypse — white/black, square corners, Segoe UI
+throughout (matches the desktop app, no web fonts). Pure HTML/CSS/JS, no
+build step.
 
 ## Files
 
