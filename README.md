@@ -6,8 +6,9 @@ step.
 
 ## Files
 
-- `index.html` — landing page: download button and a Launchpad-style app grid. Each tile links to that app's own page
+- `index.html` — landing page: download button and a Launchpad-style app grid. Each tile links to that app's own page; "Locked" tiles are inert placeholders for apps that don't exist yet
 - `clicker.html` — BobWare Clicker's page, linked from the launchpad grid
+- `Projects.html` — placeholder page for future apps/info, linked from the "Projects" tile
 - `servers.html` — "Tested Minecraft Servers" table, linked from `clicker.html`. Static and read-only for visitors (tested and submitted by a trusted third party, not BobWare); add or edit rows by editing the `<tbody>` directly and pushing
 - `style.css` — theme (colors mirror `theme.py` in the main BobWare repo)
 - `script.js` — tiny header scroll effect, no dependencies

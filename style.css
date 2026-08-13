@@ -186,22 +186,34 @@ body {
   text-align: center;
 }
 
-/* Clicker section */
-.clicker-section {
+.app-tile-locked { cursor: default; }
+
+.app-tile-locked .app-icon { background: var(--panel); }
+
+.app-tile-locked:hover .app-icon {
+  transform: none;
+  border-color: var(--border);
+  background: var(--panel);
+}
+
+.app-tile-locked span:last-child { opacity: 0.55; }
+
+/* Generic single-app page (clicker.html, Projects.html, ...) */
+.app-page {
   max-width: 440px;
   margin: 0 auto;
   padding: 100px 24px;
   text-align: center;
 }
 
-.clicker-icon { margin-bottom: 14px; }
+.app-page-icon { margin-bottom: 14px; }
 
-.clicker-section h2 {
+.app-page h2 {
   margin: 0 0 8px;
   font-size: 24px;
 }
 
-.clicker-section .desc {
+.app-page .desc {
   color: var(--muted);
   font-size: 14px;
   margin: 0 0 26px;
