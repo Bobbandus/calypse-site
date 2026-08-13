@@ -241,7 +241,14 @@ body {
 .hint {
   color: var(--muted);
   font-size: 13px;
-  margin: 0 0 26px;
+  margin: 0 0 6px;
+  max-width: 520px;
+}
+
+.hint-tech {
+  font-size: 11.5px;
+  opacity: 0.65;
+  margin-bottom: 26px;
 }
 
 .sheet-wrap {
