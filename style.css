@@ -241,14 +241,8 @@ body {
 .hint {
   color: var(--muted);
   font-size: 13px;
-  margin: 0 0 6px;
+  margin: 0 0 26px;
   max-width: 520px;
-}
-
-.hint-tech {
-  font-size: 11.5px;
-  opacity: 0.65;
-  margin-bottom: 26px;
 }
 
 .sheet-wrap {
@@ -288,40 +282,15 @@ table.sheet td {
 
 table.sheet tr:last-child td { border-bottom: none; }
 
-table.sheet td[contenteditable="true"]:focus {
-  outline: 1px solid var(--accent);
-  outline-offset: -1px;
-  background: var(--panel-alt);
+.status-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+  font-family: "Cascadia Code", "Consolas", monospace;
 }
 
-table.sheet td[contenteditable="true"]:empty::before {
-  content: attr(data-placeholder);
-  color: var(--muted);
-  opacity: 0.6;
-}
-
-.status-select {
-  background: var(--panel-alt);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 5px;
-  padding: 4px 8px;
-  font-size: 12.5px;
-  font-family: inherit;
-}
-
-.status-select.works { color: var(--accent2); }
-.status-select.flagged { color: var(--warn); }
-.status-select.banned { color: var(--danger); }
-
-.row-delete {
-  background: transparent;
-  border: none;
-  color: var(--muted);
-  cursor: pointer;
-  font-size: 17px;
-  line-height: 1;
-  padding: 4px 8px;
-}
-
-.row-delete:hover { color: var(--danger); }
+.status-badge.works { color: var(--accent2); background: rgba(34, 211, 238, 0.12); }
+.status-badge.flagged { color: var(--warn); background: rgba(255, 209, 102, 0.12); }
+.status-badge.banned { color: var(--danger); background: rgba(255, 77, 109, 0.12); }
