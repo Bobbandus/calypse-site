@@ -1,0 +1,5 @@
+{
+  "messages": [
+    { "versions": "*", "text": "TEST MESSAGE — verifying live delivery.", "url": "https://calypse-site.vercel.app" }
+  ]
+}

@@ -10,9 +10,30 @@ build step.
 - `clicker.html` — Calypse Clicker's page, links to `servers.html`
 - `Projects.html` — placeholder page for future apps/info (not linked from anywhere yet — visit it directly)
 - `servers.html` / `servers.js` — "Tested Minecraft Servers" table. Read-only for visitors; `servers.js` fetches and renders `servers.txt` at load time
-- `servers.txt` — the actual data. One line per server: `server | status | notes` (status: `Works` / `Flagged` / `Banned`). Lines starting with `#` are ignored. **To add a server, just add a line to this file and push** — no HTML editing needed
+- `servers.txt` — the actual data. One line per server: `server | status | notes | detection` (status: `Works` / `Flagged` / `Banned`; notes and detection can be blank). Lines starting with `#` are ignored. **To add a server, just add a line to this file and push** — no HTML editing needed
+- `messages.json` — read by the desktop app on startup to show version-targeted messages in its update banner (e.g. "this version is outdated, update from here"). See below
 - `style.css` — theme (white bg, black text/borders, no rounded corners; colors mirror `theme.py` in the main Calypse repo where applicable)
 - `script.js` — tiny header scroll effect, no dependencies
+
+## Pushing a message to installed apps
+
+`messages.json` is polled by every Calypse app on startup — editing it and
+pushing is live within seconds via Vercel, no new app release needed.
+
+```json
+{
+  "messages": [
+    { "versions": "<1.2.0", "text": "This version is outdated. Update from calypse-site.vercel.app.", "url": "https://calypse-site.vercel.app" }
+  ]
+}
+```
+
+`versions` accepts an exact version (`1.1.0`), a comparison (`<1.2.0`,
+`<=1.1.0`, `>1.0.0`, `>=1.1.0`), or `*` for everyone. `url` is optional —
+if set, the banner gets a "Learn more" button that opens it. Remove the
+entry (or narrow its range) once it's no longer relevant; there's no
+per-user dismissal, so a message shows every time a matching version
+starts up.
 
 ## Preview locally
 
