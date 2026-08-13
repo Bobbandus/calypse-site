@@ -1,17 +1,13 @@
 :root {
-  --bg: #0b0b12;
-  --panel: #14141f;
-  --panel-alt: #1e1e2e;
-  --panel-hover: #262638;
-  --accent: #7c5cff;
-  --accent-dim: #4a3a99;
-  --accent2: #22d3ee;
-  --text: #eef0ff;
-  --muted: #8b87a8;
-  --border: #2a2740;
-  --danger: #ff4d6d;
-  --warn: #ffd166;
-  --radius: 4px;
+  --bg: #ffffff;
+  --text: #0a0a0a;
+  --muted: #6b6b74;
+  --border: #0a0a0a;
+  --border-soft: #e3e3e8;
+  --panel: #f7f7f9;
+  --panel-alt: #eeeef1;
+  --panel-hover: #e4e4e8;
+  --radius: 0px;
   --font-heading: "Rajdhani", "Segoe UI", -apple-system, sans-serif;
 }
 
@@ -25,7 +21,6 @@ body {
   color: var(--text);
   font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  overflow-x: hidden;
 }
 
 .wrap {
@@ -34,26 +29,13 @@ body {
   padding: 0 24px;
 }
 
-/* Background: faint technical grid */
-.bg-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(rgba(124, 92, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124, 92, 255, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-  -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, black 30%, transparent 85%);
-  mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, black 30%, transparent 85%);
-}
-
 /* Header */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(11, 11, 18, 0.92);
-  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .header-inner {
@@ -74,7 +56,7 @@ body {
   letter-spacing: 0.4px;
 }
 
-/* Buttons: bordered, uppercase, basic-corporate */
+/* Buttons: square, black stroke */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -87,10 +69,10 @@ body {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
-  border: 1.5px solid var(--text);
-  background: transparent;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
   color: var(--text);
-  transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+  transition: background 0.12s ease, color 0.12s ease;
 }
 
 .btn-primary:hover {
@@ -100,12 +82,12 @@ body {
 
 .btn-ghost {
   color: var(--muted);
-  border-color: var(--border);
+  border-color: var(--border-soft);
 }
 
 .btn-ghost:hover {
-  color: var(--accent2);
-  border-color: var(--accent2);
+  color: var(--text);
+  border-color: var(--border);
 }
 
 .btn-small {
@@ -117,96 +99,28 @@ body {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 100px 24px 70px;
+  padding: 110px 24px 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hero-gem { margin-bottom: 18px; }
+.hero-gem { margin-bottom: 20px; }
 
 .wordmark {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: clamp(48px, 10vw, 84px);
+  font-size: clamp(52px, 11vw, 96px);
   letter-spacing: 1px;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   line-height: 1;
 }
 
 .tagline {
   color: var(--muted);
   font-size: 15px;
-  margin: 0 0 30px;
+  margin: 0 0 34px;
 }
-
-/* Launchpad */
-.launchpad {
-  padding: 0 24px 90px;
-}
-
-.launchpad-sheet {
-  max-width: 480px;
-  margin: 0 auto;
-  background: rgba(20, 20, 31, 0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 40px 30px;
-}
-
-.launchpad-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-.app-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 9px;
-  text-decoration: none;
-  color: var(--muted);
-  width: 92px;
-}
-
-.app-icon {
-  width: 68px;
-  height: 68px;
-  border-radius: 18px;
-  background: var(--panel-alt);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
-}
-
-.app-tile:hover .app-icon {
-  transform: translateY(-3px) scale(1.05);
-  border-color: var(--accent-dim);
-  background: var(--panel-hover);
-}
-
-.app-tile span:last-child {
-  font-size: 12px;
-  text-align: center;
-}
-
-.app-tile-locked { cursor: default; }
-
-.app-tile-locked .app-icon { background: var(--panel); }
-
-.app-tile-locked:hover .app-icon {
-  transform: none;
-  border-color: var(--border);
-  background: var(--panel);
-}
-
-.app-tile-locked span:last-child { opacity: 0.55; }
 
 /* Generic single-app page (clicker.html, Projects.html, ...) */
 .app-page {
@@ -236,6 +150,7 @@ body {
 .site-footer {
   text-align: center;
   padding: 30px 24px 44px;
+  border-top: 1px solid var(--border-soft);
 }
 
 .watermark {
@@ -249,7 +164,7 @@ body {
   margin: 6px 0 0;
   color: var(--muted);
   font-size: 11px;
-  opacity: 0.65;
+  opacity: 0.8;
 }
 
 /* Spreadsheet page */
@@ -274,7 +189,7 @@ body {
 }
 
 .sheet-wrap {
-  border: 1px solid var(--border);
+  border: 1.5px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
   margin-bottom: 18px;
@@ -284,7 +199,7 @@ body {
 table.sheet {
   width: 100%;
   border-collapse: collapse;
-  background: var(--panel);
+  background: var(--bg);
 }
 
 table.sheet th {
@@ -293,16 +208,16 @@ table.sheet th {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--accent2);
-  background: var(--panel-alt);
+  color: var(--text);
+  background: var(--panel);
   padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1.5px solid var(--border);
   white-space: nowrap;
 }
 
 table.sheet td {
   padding: 9px 14px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-soft);
   font-size: 13.5px;
   color: var(--text);
   vertical-align: middle;
@@ -312,13 +227,11 @@ table.sheet tr:last-child td { border-bottom: none; }
 
 .status-badge {
   display: inline-block;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 11.5px;
+  padding: 2px 10px;
+  border-radius: var(--radius);
+  font-size: 11px;
   font-weight: 700;
   font-family: "Cascadia Code", "Consolas", monospace;
+  border: 1px solid var(--border);
+  color: var(--text);
 }
-
-.status-badge.works { color: var(--accent2); background: rgba(34, 211, 238, 0.12); }
-.status-badge.flagged { color: var(--warn); background: rgba(255, 209, 102, 0.12); }
-.status-badge.banned { color: var(--danger); background: rgba(255, 77, 109, 0.12); }

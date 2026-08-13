@@ -1,16 +1,15 @@
 # Calypse — website
 
-Static landing page for Calypse (theme matched to the desktop app: dark
-background, purple/cyan gem accent, Rajdhani headings + Segoe UI body).
-Pure HTML/CSS/JS, no build step.
+Static landing page for Calypse — white/black, square corners, Rajdhani
+headings + Segoe UI body. Pure HTML/CSS/JS, no build step.
 
 ## Files
 
-- `index.html` — landing page: download button and a Launchpad-style app grid. Each tile links to that app's own page; "Locked" tiles are inert placeholders for apps that don't exist yet
-- `clicker.html` — Calypse Clicker's page, linked from the launchpad grid
-- `Projects.html` — placeholder page for future apps/info, linked from the "Projects" tile
+- `index.html` — just the wordmark, tagline, and one Download button. No app grid or nav — `clicker.html`/`Projects.html`/`servers.html` exist as standalone pages, not linked from here yet
+- `clicker.html` — Calypse Clicker's page
+- `Projects.html` — placeholder page for future apps/info
 - `servers.html` — "Tested Minecraft Servers" table, linked from `clicker.html`. Static and read-only for visitors (tested and submitted by a trusted third party, not Calypse); add or edit rows by editing the `<tbody>` directly and pushing
-- `style.css` — theme (colors mirror `theme.py` in the main Calypse repo)
+- `style.css` — theme (white bg, black text/borders, no rounded corners; colors mirror `theme.py` in the main Calypse repo where applicable)
 - `script.js` — tiny header scroll effect, no dependencies
 
 ## Preview locally
