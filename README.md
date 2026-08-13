@@ -6,8 +6,9 @@ step.
 
 ## Files
 
-- `index.html` — landing page: download button, a Launchpad-style app grid, and the BobWare Clicker section
-- `servers.html` / `servers.js` — "Tested Minecraft Servers" spreadsheet, linked from the Clicker section. Rows are edited in place (contenteditable + a status dropdown) and saved to that browser's `localStorage` — nothing is sent anywhere, so data doesn't sync across devices or visitors
+- `index.html` — landing page: download button and a Launchpad-style app grid. Each tile links to that app's own page
+- `clicker.html` — BobWare Clicker's page, linked from the launchpad grid
+- `servers.html` / `servers.js` — "Tested Minecraft Servers" spreadsheet, linked from `clicker.html`. Rows are edited in place (contenteditable + a status dropdown) and saved to that browser's `localStorage` — nothing is sent anywhere, so data doesn't sync across devices or visitors
 - `style.css` — theme (colors mirror `theme.py` in the main BobWare repo)
 - `script.js` — tiny header scroll effect, no dependencies
 
