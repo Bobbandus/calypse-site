@@ -56,6 +56,12 @@ body {
   letter-spacing: 0.4px;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 /* Buttons: square, black stroke */
 .btn {
   display: inline-flex;
