@@ -134,6 +134,8 @@ body {
   font-size: 16px;
 }
 
+.hero-sub strong { color: var(--text); }
+
 .hero-actions {
   display: flex;
   gap: 12px;
