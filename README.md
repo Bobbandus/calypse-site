@@ -5,10 +5,11 @@ headings + Segoe UI body. Pure HTML/CSS/JS, no build step.
 
 ## Files
 
-- `index.html` — just the wordmark, tagline, and one Download button. No app grid or nav — `clicker.html`/`Projects.html`/`servers.html` exist as standalone pages, not linked from here yet
-- `clicker.html` — Calypse Clicker's page
-- `Projects.html` — placeholder page for future apps/info
-- `servers.html` — "Tested Minecraft Servers" table, linked from `clicker.html`. Static and read-only for visitors (tested and submitted by a trusted third party, not Calypse); add or edit rows by editing the `<tbody>` directly and pushing
+- `index.html` — wordmark, tagline, one Download button, and a small "Clicker" link in the header
+- `clicker.html` — Calypse Clicker's page, links to `servers.html`
+- `Projects.html` — placeholder page for future apps/info (not linked from anywhere yet — visit it directly)
+- `servers.html` / `servers.js` — "Tested Minecraft Servers" table. Read-only for visitors; `servers.js` fetches and renders `servers.txt` at load time
+- `servers.txt` — the actual data. One line per server: `server | status | notes` (status: `Works` / `Flagged` / `Banned`). Lines starting with `#` are ignored. **To add a server, just add a line to this file and push** — no HTML editing needed
 - `style.css` — theme (white bg, black text/borders, no rounded corners; colors mirror `theme.py` in the main Calypse repo where applicable)
 - `script.js` — tiny header scroll effect, no dependencies
 

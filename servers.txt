@@ -1,0 +1,6 @@
+# Tested Minecraft Servers — one entry per line.
+# Format:  server | status | notes
+# status is one of: Works, Flagged, Banned
+# Lines starting with # are ignored. Notes can be left blank.
+
+mc.hypixel.net | Works |
