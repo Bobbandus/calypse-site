@@ -146,6 +146,37 @@ body {
   margin: 0 0 26px;
 }
 
+.project-list {
+  text-align: left;
+}
+
+.project-entry {
+  border: 1.5px solid var(--border);
+  padding: 20px;
+}
+
+.project-entry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.project-entry h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin: 0;
+  font-size: 17px;
+}
+
+.project-entry p {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin: 0;
+}
+
 /* Footer */
 .site-footer {
   text-align: center;
