@@ -1,6 +1,6 @@
 # Tested Minecraft Servers — one entry per line.
-# Format:  server | status | notes
+# Format:  server | status | notes | detection
 # status is one of: Works, Flagged, Banned
-# Lines starting with # are ignored. Notes can be left blank.
+# Lines starting with # are ignored. Notes and detection can be left blank.
 
-CubeCraft.net (Bedrock Edition) | Works | Can flag players if the CPS minimum and maximum thresholds are set too close together.
+CubeCraft.net (Bedrock Edition) | Works | | Can flag players if the CPS minimum and maximum thresholds are set too close together — keep at least a few CPS of spread between min and max so the walk actually drifts instead of hovering near one number.
