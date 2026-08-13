@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BobWare — gaming scripts &amp; tools</title>
-<meta name="description" content="BobWare: a small, growing suite of gaming scripts and tools. First out: BobWare Clicker, a humanized auto clicker with multiple keybind profiles.">
+<title>BobWare</title>
+<meta name="description" content="BobWare: gaming scripts and tools. First out: BobWare Clicker, a humanized auto clicker with multiple keybind profiles.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,3 27,16 16,29 5,16' fill='%237c5cff'/%3E%3Cpolygon points='16,3 27,16 16,16' fill='%2322d3ee'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -15,151 +15,57 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="#top">
-      <svg class="brand-gem" viewBox="0 0 32 32" width="26" height="26" aria-hidden="true">
+      <svg class="brand-gem" viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
         <polygon points="16,3 27,16 16,29 5,16" fill="var(--accent)"/>
         <polygon points="16,3 27,16 16,16" fill="var(--accent2)"/>
       </svg>
       <span>BobWare</span>
     </a>
-    <nav class="nav">
-      <a href="#apps">Tools</a>
-      <a href="#clicker">Clicker</a>
-      <a href="#download">Download</a>
-      <a class="nav-cta" href="#download">Get it</a>
-    </nav>
   </div>
 </header>
 
 <main id="top">
 
   <section class="hero wrap">
-    <p class="eyebrow">// gaming scripts &amp; tools</p>
-    <h1>Small tools.<br>Built for gaming.</h1>
-    <p class="hero-sub">
-      BobWare is a growing suite of scripts and utilities for gamers — one
-      launcher, a shared look, no accounts or background junk. First out:
-      <strong>BobWare Clicker</strong>, a humanized auto clicker with
-      keybind profiles for whatever you're grinding.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#download">Download BobWare</a>
-      <a class="btn btn-ghost" href="https://github.com/Bobbandus/bobware" id="repo-link" target="_blank" rel="noopener">View on GitHub</a>
-    </div>
-    <div class="hero-terminal">
-      <div class="terminal-bar">
-        <span class="dot" style="--c:#ff4d6d"></span>
-        <span class="dot" style="--c:#ffd166"></span>
-        <span class="dot" style="--c:#22d3ee"></span>
-        <span class="terminal-title">powershell</span>
-      </div>
-      <pre class="terminal-body"><code><span class="prompt">PS&gt;</span> venv\Scripts\activate
-<span class="prompt">PS&gt;</span> pip install -r requirements.txt
-<span class="prompt">PS&gt;</span> python launcher.py</code></pre>
-    </div>
+    <svg class="hero-gem" viewBox="0 0 32 32" width="52" height="52" aria-hidden="true">
+      <polygon points="16,3 27,16 16,29 5,16" fill="var(--accent)"/>
+      <polygon points="16,3 27,16 16,16" fill="var(--accent2)"/>
+    </svg>
+    <p class="tagline">Gaming scripts &amp; tools.</p>
+    <a class="btn btn-primary" href="https://github.com/Bobbandus/bobware/releases/latest" target="_blank" rel="noopener">Download BobWare</a>
   </section>
 
-  <section id="apps" class="section wrap">
-    <h2 class="section-title">One launcher. Every app.</h2>
-    <p class="section-sub">
-      The BobWare Launcher lists every installed app. Pick one, hit Launch,
-      it opens in its own window and its own process.
-    </p>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="card-icon">[01]</div>
-        <h3>Same shell</h3>
-        <p>Every app shares BobWare's look, so nothing feels bolted on.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">[02]</div>
-        <h3>Own process</h3>
-        <p>Apps run independently — one crashing doesn't take the rest down.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">[03]</div>
-        <h3>No junk</h3>
-        <p>Grab the exe, run it. No accounts, no background services.</p>
+  <section class="launchpad" id="apps">
+    <div class="launchpad-sheet">
+      <div class="launchpad-grid">
+        <a class="app-tile" href="#clicker">
+          <span class="app-icon">
+            <svg viewBox="0 0 32 32" width="34" height="34" aria-hidden="true">
+              <polygon points="16,3 27,16 16,29 5,16" fill="var(--accent)"/>
+              <polygon points="16,3 27,16 16,16" fill="var(--accent2)"/>
+            </svg>
+          </span>
+          <span>BobWare Clicker</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="clicker" class="section wrap clicker-section">
-    <div class="clicker-grid">
-      <div>
-        <p class="eyebrow">// featured app</p>
-        <h2 class="section-title small-title">BobWare Clicker</h2>
-        <p class="section-sub">
-          Hold your bound key or button, it clicks. Let go, it stops. Each
-          profile keeps its own keybind and timing config, so different
-          buttons can run completely different click styles at the same time.
-        </p>
-        <ul class="feature-list">
-          <li><strong>Multiple profiles</strong> — bind different keys to different click styles, switch by just picking up the other button.</li>
-          <li><strong>Presets</strong> — Slow, Normal, Fast, Turbo. Pick one, tweak the numbers if you want, done.</li>
-          <li><strong>Humanized timing</strong> — CPS and hold time drift on a random walk instead of repeating like a machine.</li>
-          <li><strong>Startup ramp</strong> — about half your holds ease into full speed instead of snapping to it instantly.</li>
-          <li><strong>Reaction delay</strong> — a randomized beat before the first click, like an actual reaction.</li>
-        </ul>
-      </div>
-      <div class="preset-panel" aria-hidden="true">
-        <div class="preset-panel-head">Presets</div>
-        <div class="preset-row">
-          <span>Slow</span><span class="preset-val">4–6 CPS</span>
-        </div>
-        <div class="preset-row">
-          <span>Normal</span><span class="preset-val">8–12 CPS</span>
-        </div>
-        <div class="preset-row">
-          <span>Fast</span><span class="preset-val">14–18 CPS</span>
-        </div>
-        <div class="preset-row">
-          <span>Turbo</span><span class="preset-val">20–24 CPS</span>
-        </div>
-        <div class="preset-status">
-          <span class="status-dot"></span> Idle — hold trigger to click
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="download" class="section wrap download-section">
-    <h2 class="section-title">Get BobWare</h2>
-    <p class="section-sub">No Python needed. Grab the exe, run it.</p>
-    <div class="grid grid-2 download-grid">
-      <div class="card download-card">
-        <h3>BobWare Launcher</h3>
-        <p>Opens the app list and starts BobWare Clicker (or any future app) as its own process.</p>
-        <code>launcher\BobWareLauncher.exe</code>
-        <a class="btn btn-primary" href="https://github.com/Bobbandus/bobware/releases/latest" id="download-link" target="_blank" rel="noopener">Download latest release</a>
-      </div>
-      <div class="card download-card">
-        <h3>Run from source</h3>
-        <p>Prefer Python? Clone the repo and run it directly.</p>
-        <code>python launcher.py</code>
-        <a class="btn btn-ghost" href="https://github.com/Bobbandus/bobware" id="source-link" target="_blank" rel="noopener">View source on GitHub</a>
-      </div>
-    </div>
-    <p class="disclaimer">
-      Auto clickers violate the terms of service of many online games and services,
-      including Hypixel. Use only where it is allowed: single player games, your own
-      tools, or explicitly permitted contexts. This tool is not tuned to evade
-      anti-cheat systems.
-    </p>
+  <section class="clicker-section" id="clicker">
+    <svg class="clicker-icon" viewBox="0 0 32 32" width="40" height="40" aria-hidden="true">
+      <polygon points="16,3 27,16 16,29 5,16" fill="var(--accent)"/>
+      <polygon points="16,3 27,16 16,16" fill="var(--accent2)"/>
+    </svg>
+    <h2>BobWare Clicker</h2>
+    <p class="desc">Humanized auto clicker with multiple keybind profiles.</p>
+    <a class="btn btn-ghost" href="servers.html">Tested Minecraft Servers</a>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div class="brand brand-footer">
-      <svg class="brand-gem" viewBox="0 0 32 32" width="18" height="18" aria-hidden="true">
-        <polygon points="16,3 27,16 16,29 5,16" fill="var(--accent)"/>
-        <polygon points="16,3 27,16 16,16" fill="var(--accent2)"/>
-      </svg>
-      <span>BobWare</span>
-    </div>
-    <p class="watermark">Built by Bobbandus</p>
-  </div>
+  <p class="watermark">Built by Bobbandus</p>
+  <p class="fineprint">Not tuned to evade anti-cheat. Use only where auto clicking is allowed.</p>
 </footer>
 
 <script src="script.js"></script>
