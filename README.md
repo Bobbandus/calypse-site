@@ -6,7 +6,8 @@ build step.
 
 ## Files
 
-- `index.html` — wordmark, tagline, one Download button, and a small "Clicker" link in the header
+- `index.html` — wordmark, tagline, one Download button (links to `download.html`), and a small "Clicker" link in the header
+- `download.html` / `download.js` — resolves the latest GitHub release via the API client-side and points the button at the actual `.exe` asset, so it downloads directly instead of landing on github.com's releases page. Falls back to the releases page if the API call fails
 - `clicker.html` — Calypse Clicker's page, links to `servers.html`
 - `Projects.html` — placeholder page for future apps/info (not linked from anywhere yet — visit it directly)
 - `servers.html` / `servers.js` — "Tested Minecraft Servers" table. Read-only for visitors; `servers.js` fetches and renders `servers.txt` at load time
