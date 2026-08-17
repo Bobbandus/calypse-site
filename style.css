@@ -118,7 +118,11 @@ body {
   font-weight: 700;
   font-size: clamp(52px, 11vw, 96px);
   letter-spacing: 1px;
-  margin: 0 0 20px;
+  /* This font's line box reserves ~33px more space above the cap-height
+     than the glyphs actually use (measured via canvas actualBoundingBox*
+     vs the font's natural ascent/descent) — without this, the wordmark
+     visually sits far from the gem icon above it despite a normal margin. */
+  margin: -0.15em 0 20px;
   line-height: 1;
 }
 
