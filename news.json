@@ -1,0 +1,22 @@
+{
+  "news": [
+    {
+      "title": "In-game overlay panel",
+      "date": "2026-08-18",
+      "body": "Check instance status, tweak timing, and switch presets without alt-tabbing out of your game. Bind a key to it in Clicker settings.",
+      "url": null
+    },
+    {
+      "title": "A timing model built on real click data",
+      "date": "2026-08-18",
+      "body": "Calypse Clicker's click intervals aren't a fixed loop — they're generated from a model tuned against real human click-timing data, down to hesitation pauses and fatigue drift.",
+      "url": null
+    },
+    {
+      "title": "Sign in is here",
+      "date": "2026-08-18",
+      "body": "Calypse now has accounts. This is step one toward the rest of the Calypse toolset — more apps land in this same launcher over time.",
+      "url": null
+    }
+  ]
+}
