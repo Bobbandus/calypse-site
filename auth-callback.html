@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signing in — Calypse</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,4 27,10 16,16 5,10' fill='%230a0a0a'/%3E%3Cpolygon points='5,10 16,16 16,28 5,22' fill='%230a0a0a' opacity='0.5'/%3E%3Cpolygon points='27,10 16,16 16,28 27,22' fill='%230a0a0a' opacity='0.75'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+  .spinner { animation: spin 0.9s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+  .callback-fallback { display: none; margin-top: 22px; }
+  .callback-fallback.is-visible { display: block; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+        <polygon points="16,4 27,10 16,16 5,10" fill="var(--text)"/>
+        <polygon points="5,10 16,16 16,28 5,22" fill="var(--text)" opacity="0.5"/>
+        <polygon points="27,10 16,16 16,28 27,22" fill="var(--text)" opacity="0.75"/>
+      </svg>
+      <span>Calypse</span>
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="app-page">
+    <svg class="app-page-icon spinner" id="spinner" viewBox="0 0 24 24" width="40" height="40" fill="none" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" stroke="var(--border-soft)" stroke-width="2.5"/>
+      <path d="M21 12a9 9 0 0 0-9-9" stroke="var(--text)" stroke-width="2.5" stroke-linecap="round"/>
+    </svg>
+    <h2 id="status-heading">Signing you in&hellip;</h2>
+    <p class="desc" id="status-desc">Handing this back to Calypse.</p>
+    <div class="callback-fallback" id="fallback">
+      <a class="btn btn-primary" id="open-app-link" href="#">Open Calypse</a>
+      <p class="fineprint" style="margin-top:14px;">You can close this tab once Calypse opens.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="watermark">Team Calypse</p>
+</footer>
+
+<script>
+  var params = window.location.search;
+  var qs = new URLSearchParams(params);
+  var errorDescription = qs.get("error_description") || qs.get("error");
+  var target = "calypse://auth-callback" + params;
+
+  if (errorDescription) {
+    document.getElementById("spinner").style.display = "none";
+    document.getElementById("status-heading").textContent = "Sign-in failed";
+    document.getElementById("status-desc").textContent = errorDescription;
+    var fallback = document.getElementById("fallback");
+    fallback.querySelector(".fineprint").textContent = "You can close this tab and try again from Calypse.";
+    document.getElementById("open-app-link").style.display = "none";
+    fallback.classList.add("is-visible");
+  } else {
+    document.getElementById("open-app-link").href = target;
+    window.location.href = target;
+    setTimeout(function () {
+      document.getElementById("status-heading").textContent = "Almost there";
+      document.getElementById("status-desc").textContent = "If Calypse didn't open on its own:";
+      document.getElementById("fallback").classList.add("is-visible");
+    }, 1400);
+  }
+</script>
+</body>
+</html>
